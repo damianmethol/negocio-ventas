@@ -1,0 +1,47 @@
+body{
+    background-color: red;
+
+}
+h1{
+    background-color: red;
+    color: brown;
+    text-align: center;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 6px; 
+}
+.label{
+    color:blue;
+    margin: 2px;
+}
+.text{
+    color:darkblue;
+    background-color: activecaption;
+    padding: 3px;
+    border-radius: 3px;
+    width: 200px;
+}
+.button{
+    background-color: cornflowerblue;
+    color:darkblue;
+    padding: 3px;
+    border-radius: 6px;
+    width: 120px;
+}
+.labelInfo{
+    text-align: center;
+    background-color: lightgrey;
+    color:blue;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 4px;
+}
+.table{
+    background-color: darksalmon;
+    padding: 8px;
+    border-radius: 6px;
+}
+.celda{
+    color:blueviolet;
+    padding: 3px;
+}

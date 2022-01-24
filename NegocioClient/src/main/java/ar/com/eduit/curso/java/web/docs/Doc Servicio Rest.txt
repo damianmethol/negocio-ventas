@@ -1,0 +1,56 @@
+Documento De Servicio REST
+Path Servicio: http://localhost:8082/NegocioServer/webresources
+
+
+========================================================================
+-- Clientes
+========================================================================
+Estado: No Iniciado
+Path: /clientes/v1
+
+Path: /info
+Descripción: Devuelve el estado del servicio
+
+Path: /all
+Descripción: no recibe parametros y entrega un Json con los clientes.
+
+Path: /byId
+Descripción: recibe como parametro un Id por GET y devuelve un cliente en formato Json.
+
+Path: /byApellido
+Descripción: recibe como parametro un apellido por GET y devuelve un Json con los cliente coincidentes.
+
+Path: /alta
+Descripción: recibe parametros por GET y devuelve el id generado 
+	String nombre
+	String apellido
+	int edad
+        int idArticulo
+
+
+========================================================================
+-- Artículos
+========================================================================
+Estado: No Iniciado
+Path: /articulos/v1
+
+Path: /info
+Descripción: Devuelve el estado del servicio
+
+Path: /all
+Descripción: no recibe parametros y entrega un Json con los artículos.
+
+Path: /byId
+Descripción: recibe como parametro un Id por GET y devuelve un artículos en formato Json.
+
+Path: /byDescripcion
+Descripción: recibe como parametro una descripción por GET y devuelve un Json con los artículos coincidentes.
+
+Path: /alta
+Descripción: recibe parametros por GET y devuelve el id generado 
+	String descripcion
+	double precio
+	int stock
+
+	
+	

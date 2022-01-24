@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet-mapping>
+        <servlet-name>ArticuloAlta</servlet-name>
+        <url-pattern>/ArticuloAlta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticuloBaja</servlet-name>
+        <url-pattern>/ArticuloBaja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticuloAll</servlet-name>
+        <url-pattern>/ArticuloAll</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticuloLikeDescripcion</servlet-name>
+        <url-pattern>/ArticuloLikeDescripcion</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            9
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>ArticuloAlta</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.services.ArticuloAlta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ArticuloBaja</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.services.ArticuloBaja</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ArticuloAll</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.services.ArticuloAll</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ArticuloLikeDescripcion</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.services.ArticuloLikeDescripcion</servlet-class>
+    </servlet>
+    <welcome-file-list>
+        <welcome-file>/index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
