@@ -51,6 +51,8 @@ public class ClienteService {
             @QueryParam("edad") int edad,
             @QueryParam("idArticulo") int idArticulo
     ){
+        nombre = nombre.replaceAll("_", " ");
+        apellido = apellido.replaceAll("_", " ");
         Cliente cliente=new Cliente(nombre, apellido, edad, idArticulo);
         cr.save(cliente);
         return cliente.getId();

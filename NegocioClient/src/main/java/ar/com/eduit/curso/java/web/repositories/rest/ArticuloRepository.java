@@ -20,6 +20,7 @@ public class ArticuloRepository implements I_ArticuloRepository{
     @Override
     public void save(Articulo articulo) {
         if(articulo==null) return;
+        articulo.setDescripcion(articulo.getDescripcion().replaceAll(" ", "_"));
         String url=urlServer+"/articulos/v1/alta?descripcion="+articulo.getDescripcion()
                 +"&precio="+articulo.getPrecio()
                 +"&stock="+articulo.getStock();

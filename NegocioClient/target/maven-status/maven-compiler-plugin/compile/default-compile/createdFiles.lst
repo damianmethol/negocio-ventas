@@ -4,6 +4,7 @@ ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository$2.class
 ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository$3.class
 ar\com\eduit\curso\java\web\managed\bean\ClienteMB.class
 ar\com\eduit\curso\java\web\test\TestRepository.class
+ar\com\eduit\curso\java\web\managed\bean\LinksMB.class
 ar\com\eduit\curso\java\web\repositories\rest\ArticuloRepository$1.class
 ar\com\eduit\curso\java\web\entities\Cliente.class
 ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository.class

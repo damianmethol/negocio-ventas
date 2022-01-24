@@ -61,5 +61,48 @@ public class ArticuloRepository implements I_ArticuloRepository {
         }
         return list;
     }
+
+    @Override
+    public List<Articulo> getLikeDescripcion(String descripcion) {
+        if(descripcion==null) return new ArrayList();
+        List<Articulo>list=new ArrayList();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "select * from articulos where descripcion like ?")){
+            ps.setString(1, "%"+descripcion.toLowerCase()+"%");
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                list.add(new Articulo(
+                        rs.getInt("id"), 
+                        rs.getString("descripcion"), 
+                        rs.getDouble("precio"),
+                        rs.getInt("stock")
+                ));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return list;
+    }
+
+    @Override
+    public Articulo getById(int id) {
+        Articulo articulo = new Articulo();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "select * from articulos where id=?")){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                articulo = new Articulo(
+                        rs.getInt("id"), 
+                        rs.getString("descripcion"), 
+                        rs.getDouble("precio"),
+                        rs.getInt("stock")
+                );
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return articulo;
+    }
     
 }

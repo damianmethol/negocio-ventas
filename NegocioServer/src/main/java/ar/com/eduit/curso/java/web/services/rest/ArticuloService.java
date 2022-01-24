@@ -30,6 +30,7 @@ public class ArticuloService {
             @QueryParam("precio") double precio, 
             @QueryParam("stock") int stock
     ){
+        descripcion = descripcion.replaceAll("_", " ");
         Articulo articulo=new Articulo(descripcion, precio, stock);
         ar.save(articulo);
         return articulo.getId();

@@ -25,6 +25,8 @@ public class ClienteRepository implements I_ClienteRepository{
     @Override
     public void save(Cliente cliente) {
         if(cliente==null) return;
+        cliente.setNombre(cliente.getNombre().replaceAll(" ", "_"));
+        cliente.setApellido(cliente.getApellido().replaceAll(" ", "_"));
         String url=urlServer+"/clientes/v1/alta?nombre="+cliente.getNombre()
                 +"&apellido="+cliente.getApellido()
                 +"&edad="+cliente.getEdad()
