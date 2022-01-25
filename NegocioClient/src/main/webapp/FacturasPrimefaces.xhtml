@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facturas</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:menubar>
+                <p:menuitem value="Inicio"      url="#{linksMB.index}"/>
+                <p:menuitem value="Articulos"   url="#{linksMB.articulos}"/>
+                <p:menuitem value="Clientes"    url="#{linksMB.clientes}"/>
+                <p:menuitem value="Facturas"    url="#{linksMB.facturas}"/>
+                <p:divider layout="vertical"/>
+                <f:facet name="options">
+                    <p:clock pattern="dd/MM/yyyy HH:mm"/>
+                </f:facet>
+            </p:menubar>
+        </h:form>
+        <h1>Mantenimiento de Facturas</h1>
+        <br></br>
+        <hr></hr>
+        <br></br>
+        <h:form>
+            <p:panelGrid columns="4">
+                <p:outputLabel for="nombre" value="Nombre: "/>
+                <p:inputText id="nombre" value="#{facturaMB.factura.nombre}" style="width: 200px;"
+                             required="true" requiredMessage="Campo Obligatorio!" maxlength="25" />
+                <p:outputLabel for="apellido" value="Apellido: "/>
+                <p:inputText id="apellido" value="#{facturaMB.factura.apellido}" style="width: 200px;"
+                             required="true" requiredMessage="Campo Obligatorio!" maxlength="25" />
+                <p:outputLabel for="tipo" value="Tipo: "/>
+                <p:inputText id="tipo" value="#{facturaMB.factura.tipo}" style="width: 200px;"
+                             required="true" requiredMessage="Campo Obligatorio!" maxlength="1" />
+                <p:outputLabel for="monto" value="Monto: "/>
+                <p:inputText id="monto" value="#{facturaMB.factura.monto}" style="width: 200px;"
+                             required="true" requiredMessage="Campo Obligatorio!" maxlength="10" />
+                <p:selectOneMenu id="articulo" value="#{facturaMB.factura.idArticulo}" style="width: 360px;" >
+                    <f:selectItems value="#{articuloMB.all}" var="a" itemValue="#{a.id}"
+                                   itemLabel="#{a.id}, #{a.descripcion}, #{a.precio}, #{a.stock}"/>
+                </p:selectOneMenu>
+                <p:commandButton value="Guardar" action="#{facturaMB.save()}" ajax="false"/>
+                <p:outputLabel value="#{facturaMB.mensaje}"/>
+            </p:panelGrid>
+            <p:outputLabel value="* campo obligatorio"/>
+            <p:growl id="growl" showDetail="true" />
+            </h:form>
+        <br></br>
+        <hr></hr>
+        <br></br>
+        <h:form>
+            <p:outputLabel value="Buscar Apellido: "/>
+            <p:inputText value="#{facturaMB.buscarApellido}" style="margin-bottom: 25px"/>
+            <p:dataTable var="f" value="#{facturaMB.likeApellido}" rows="10"
+                         paginator="true"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                         rowsPerPageTemplate="5,10,15,20,{ShowAll|'All'}">
+
+                <p:column headerText="Id">
+                    <h:outputText value="#{f.id}" />
+                </p:column>
+
+                <p:column headerText="Nombre">
+                    <h:outputText value="#{f.nombre}" />
+                </p:column>
+
+                <p:column headerText="Apellido">
+                    <h:outputText value="#{f.apellido}" />
+                </p:column>
+
+                <p:column headerText="Tipo">
+                    <h:outputText value="#{f.tipo}" />
+                </p:column>
+                
+                <p:column headerText="Monto">
+                    <h:outputText value="#{f.monto}" />
+                </p:column>
+                
+                <p:column headerText="idArticulo">
+                    <h:outputText value="#{f.idArticulo}" />
+                </p:column>
+
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>

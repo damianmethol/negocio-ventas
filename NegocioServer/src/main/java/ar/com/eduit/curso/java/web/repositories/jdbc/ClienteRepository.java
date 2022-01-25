@@ -1,6 +1,5 @@
 package ar.com.eduit.curso.java.web.repositories.jdbc;
 
-import ar.com.eduit.curso.java.web.entities.Articulo;
 import ar.com.eduit.curso.java.web.entities.Cliente;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_ClienteRepository;
 import java.sql.Connection;

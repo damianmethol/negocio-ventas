@@ -14,6 +14,7 @@
                 <p:menuitem value="Inicio"      url="#{linksMB.index}"/>
                 <p:menuitem value="Articulos"   url="#{linksMB.articulos}"/>
                 <p:menuitem value="Clientes"    url="#{linksMB.clientes}"/>
+                <p:menuitem value="Facturas"    url="#{linksMB.facturas}"/>
                 <p:divider layout="vertical"/>
                 <f:facet name="options">
                     <p:clock pattern="dd/MM/yyyy HH:mm"/>
@@ -45,8 +46,8 @@
         <hr></hr>
         <br></br>
         <h:form>
-            <p:outputLabel value="Buscar Apellido: "/>
-            <p:inputText value="#{articuloMB.buscarDescripcion}"/>
+            <p:outputLabel value="Buscar Nombre: "/>
+            <p:inputText value="#{articuloMB.buscarDescripcion}" style="margin-bottom: 25px"/>
             <p:dataTable var="a" value="#{articuloMB.likeDescripcion}" rows="10"
                          paginator="true"
                          paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"

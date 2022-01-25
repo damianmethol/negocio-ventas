@@ -12,6 +12,7 @@ public class LinksMB implements Serializable {
     private String index = urlServer + "/index.xhtml";
     private String clientes = urlServer + "/ClientesPrimefaces.xhtml";
     private String articulos = urlServer + "/ArticulosPrimefaces.xhtml";
+    private String facturas = urlServer + "/FacturasPrimefaces.xhtml";
 
     public String getIndex() {
         return index;
@@ -35,6 +36,14 @@ public class LinksMB implements Serializable {
 
     public void setArticulos(String articulos) {
         this.articulos = articulos;
+    }
+
+    public String getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(String facturas) {
+        this.facturas = facturas;
     }
     
 }

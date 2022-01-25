@@ -52,5 +52,32 @@ Descripción: recibe parametros por GET y devuelve el id generado
 	double precio
 	int stock
 
-	
-	
+========================================================================
+-- Facturas
+========================================================================
+Estado: No Iniciado
+Path: /facturas/v1
+
+Path: /info
+Descripción: Devuelve el estado del servicio
+
+Path: /all
+Descripción: no recibe parametros y entrega un Json con las facturas.
+
+Path: /byId
+Descripción: recibe como parametro un Id por GET y devuelve una factura en formato Json.
+
+Path: /likeTipo
+Descripción: recibe como parametro un tipo de factura por GET y devuelve un Json con las facturas coincidentes.
+
+Path: /likeApellido
+Descripción: recibe como parametro un apellido del cliente al que le pertenece la factura
+por GET y devuelve un Json con las facturas coincidentes.
+
+Path: /alta
+Descripción: recibe parametros por GET y devuelve el id generado 
+	String nombre
+        String apellido
+        String tipo
+	double monto
+	int idArticulo
