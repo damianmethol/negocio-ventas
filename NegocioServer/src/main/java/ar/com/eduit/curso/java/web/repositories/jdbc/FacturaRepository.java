@@ -3,6 +3,7 @@ package ar.com.eduit.curso.java.web.repositories.jdbc;
 import ar.com.eduit.curso.java.web.entities.Articulo;
 import ar.com.eduit.curso.java.web.entities.Cliente;
 import ar.com.eduit.curso.java.web.entities.Factura;
+import ar.com.eduit.curso.java.web.enums.Tipo;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_FacturaRepository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,7 +27,7 @@ public class FacturaRepository implements I_FacturaRepository {
                 PreparedStatement.RETURN_GENERATED_KEYS)){
             ps.setString(1, factura.getNombre());
             ps.setString(2, factura.getApellido());
-            ps.setString(3, factura.getTipo());
+            ps.setString(3, factura.getTipo().toString());
             ps.setDouble(4, factura.getMonto());
             ps.setInt(5, factura.getIdArticulo());
             ps.execute();
@@ -57,7 +58,7 @@ public class FacturaRepository implements I_FacturaRepository {
                         rs.getInt("id"), 
                         rs.getString("nombre"), 
                         rs.getString("apellido"), 
-                        rs.getString("tipo"),
+                        Tipo.valueOf(rs.getString("tipo").toUpperCase()),
                         rs.getDouble("monto"),
                         rs.getInt("idArticulo")
                 ));
@@ -69,19 +70,19 @@ public class FacturaRepository implements I_FacturaRepository {
     }
 
     @Override
-    public List<Factura> getLikeTipo(String tipo) {
+    public List<Factura> getLikeTipo(Tipo tipo) {
         if(tipo==null) return new ArrayList();
         List<Factura>list=new ArrayList();
         try (PreparedStatement ps = conn.prepareStatement(
                 "select * from facturas where tipo like ?")){
-            ps.setString(1, "%"+tipo.toLowerCase()+"%");
+            ps.setString(1, "%"+tipo.toString().toLowerCase()+"%");
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 list.add(new Factura(
                         rs.getInt("id"), 
                         rs.getString("nombre"), 
                         rs.getString("apellido"),
-                        rs.getString("tipo"),
+                        Tipo.valueOf(rs.getString("tipo").toUpperCase()),
                         rs.getDouble("monto"),
                         rs.getInt("idArticulo")
                 ));
@@ -104,7 +105,7 @@ public class FacturaRepository implements I_FacturaRepository {
                         rs.getInt("id"), 
                         rs.getString("nombre"), 
                         rs.getString("apellido"),
-                        rs.getString("tipo"),
+                        Tipo.valueOf(rs.getString("tipo").toUpperCase()),
                         rs.getDouble("monto"),
                         rs.getInt("idArticulo")
                 );

@@ -2,6 +2,7 @@ package ar.com.eduit.curso.java.web.services.rest;
 
 import ar.com.eduit.curso.java.web.connectors.Connector;
 import ar.com.eduit.curso.java.web.entities.Factura;
+import ar.com.eduit.curso.java.web.enums.Tipo;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_FacturaRepository;
 import ar.com.eduit.curso.java.web.repositories.jdbc.FacturaRepository;
 import com.google.gson.Gson;
@@ -27,7 +28,7 @@ public class FacturaService {
     public int alta(
             @QueryParam("nombre") String nombre, 
             @QueryParam("apellido") String apellido, 
-            @QueryParam("tipo") String tipo,
+            @QueryParam("tipo") Tipo tipo,
             @QueryParam("monto") double monto,
             @QueryParam("idArticulo") int idArticulo
     ){
@@ -48,7 +49,7 @@ public class FacturaService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("likeTipo")
-    public String getLikeTipo(@QueryParam("tipo") String tipo){
+    public String getLikeTipo(@QueryParam("tipo") Tipo tipo){
         return new Gson().toJson(fr.getLikeTipo(tipo));
     }
     

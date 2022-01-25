@@ -1,6 +1,7 @@
 package ar.com.eduit.curso.java.web.repositories.rest;
 
 import ar.com.eduit.curso.java.web.entities.Factura;
+import ar.com.eduit.curso.java.web.enums.Tipo;
 import ar.com.eduit.curso.java.web.http.ClienteHttp;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_FacturaRepository;
 import com.google.gson.Gson;
@@ -24,7 +25,7 @@ public class FacturaRepository implements I_FacturaRepository {
         factura.setApellido(factura.getApellido().replaceAll(" ", "_"));
         String url=urlServer+"/facturas/v1/alta?nombre="+factura.getNombre()
                 +"&apellido="+factura.getApellido()
-                +"&tipo="+factura.getTipo()
+                +"&tipo="+factura.getTipo().toString()
                 +"&monto="+factura.getMonto()
                 +"&idArticulo="+factura.getIdArticulo();
         try{
@@ -50,13 +51,13 @@ public class FacturaRepository implements I_FacturaRepository {
     }
 
     @Override
-    public List<Factura> getLikeTipo(String tipo) {
+    public List<Factura> getLikeTipo(Tipo tipo) {
        Type listType=new TypeToken<List<Factura>>(){}.getType();
         try{
             List<Factura>list=new Gson()
                     .fromJson(
                             ClienteHttp
-                                    .responseBody(urlServer+"/clientes/v1/likeTipo?tipo="+tipo), listType);
+                                    .responseBody(urlServer+"/clientes/v1/likeTipo?tipo="+tipo.toString()), listType);
             return list;
         }catch(Exception e){
             System.out.println(e);

@@ -2,6 +2,7 @@ package ar.com.eduit.curso.java.web.servlets.services;
 
 import ar.com.eduit.curso.java.web.connectors.Connector;
 import ar.com.eduit.curso.java.web.entities.Factura;
+import ar.com.eduit.curso.java.web.enums.Tipo;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_FacturaRepository;
 import ar.com.eduit.curso.java.web.repositories.jdbc.FacturaRepository;
 import jakarta.servlet.ServletException;
@@ -21,7 +22,7 @@ public class FacturaAlta extends HttpServlet {
             try{
                String nombre=request.getParameter("nombre");
                String apellido=request.getParameter("apellido");
-               String tipo = request.getParameter("tipo");
+               Tipo tipo = Tipo.valueOf(request.getParameter("tipo"));
                double monto=Double.parseDouble(request.getParameter("monto"));
                int idArticulo=Integer.parseInt(request.getParameter("idArticulo"));
                Factura factura=new Factura(nombre, apellido, tipo, monto, idArticulo);

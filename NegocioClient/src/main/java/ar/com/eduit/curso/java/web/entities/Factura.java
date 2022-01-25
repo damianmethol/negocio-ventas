@@ -1,5 +1,6 @@
 package ar.com.eduit.curso.java.web.entities;
 
+import ar.com.eduit.curso.java.web.enums.Tipo;
 import java.io.Serializable;
 
 public class Factura implements Serializable {
@@ -7,14 +8,14 @@ public class Factura implements Serializable {
     int id;
     String nombre;
     String apellido;
-    String tipo;
+    Tipo tipo;
     double monto;
     int idArticulo;
 
     public Factura() {
     }
 
-    public Factura(String nombre, String apellido, String tipo, double monto, int idArticulo) {
+    public Factura(String nombre, String apellido, Tipo tipo, double monto, int idArticulo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.tipo = tipo;
@@ -22,7 +23,7 @@ public class Factura implements Serializable {
         this.idArticulo = idArticulo;
     }
 
-    public Factura(int id, String nombre, String apellido, String tipo, double monto, int idArticulo) {
+    public Factura(int id, String nombre, String apellido, Tipo tipo, double monto, int idArticulo) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -60,11 +61,11 @@ public class Factura implements Serializable {
         this.apellido = apellido;
     }
 
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
 

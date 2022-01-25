@@ -33,12 +33,14 @@
                 <p:outputLabel for="apellido" value="Apellido: "/>
                 <p:inputText id="apellido" value="#{facturaMB.factura.apellido}" style="width: 200px;"
                              required="true" requiredMessage="Campo Obligatorio!" maxlength="25" />
-                <p:outputLabel for="tipo" value="Tipo: "/>
-                <p:inputText id="tipo" value="#{facturaMB.factura.tipo}" style="width: 200px;"
-                             required="true" requiredMessage="Campo Obligatorio!" maxlength="1" />
+                <p:outputLabel for="tipo" value="Factura: "/>
+                <p:selectOneMenu id="tipo" value="#{facturaMB.factura.tipo}" style="width: 100px;" >
+                    <f:selectItems value="#{tipoMB.tipos}"/>
+                </p:selectOneMenu>
                 <p:outputLabel for="monto" value="Monto: "/>
                 <p:inputText id="monto" value="#{facturaMB.factura.monto}" style="width: 200px;"
                              required="true" requiredMessage="Campo Obligatorio!" maxlength="10" />
+                <p:outputLabel for="articulo" value="Artículo: "/>
                 <p:selectOneMenu id="articulo" value="#{facturaMB.factura.idArticulo}" style="width: 360px;" >
                     <f:selectItems value="#{articuloMB.all}" var="a" itemValue="#{a.id}"
                                    itemLabel="#{a.id}, #{a.descripcion}, #{a.precio}, #{a.stock}"/>

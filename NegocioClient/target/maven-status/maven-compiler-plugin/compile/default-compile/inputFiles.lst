@@ -1,4 +1,5 @@
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\managed\bean\FacturaMB.java
+C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\enums\Tipo.java
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\http\ClienteHttp.java
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\managed\bean\LinksMB.java
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\entities\Factura.java
@@ -11,5 +12,6 @@ C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\N
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\repositories\rest\FacturaRepository.java
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\repositories\interfaces\I_ArticuloRepository.java
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository.java
+C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\managed\bean\TipoMB.java
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\entities\Cliente.java
 C:\Users\damia\OneDrive\Desktop\JAVA EducaciónIT\Java Web API\proyecto-negocio\NegocioClient\src\main\java\ar\com\eduit\curso\java\web\repositories\interfaces\I_FacturaRepository.java

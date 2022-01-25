@@ -1,5 +1,5 @@
 body{
-    background-color: gray;
+    background-color: orange;
 
 }
 h1{
@@ -11,11 +11,11 @@ h1{
     border-radius: 6px; 
 }
 .label{
-    color:blue;
+    color:white;
     margin: 2px;
 }
 .text{
-    color:darkblue;
+    color:white;
     background-color: activecaption;
     padding: 3px;
     border-radius: 3px;
@@ -30,8 +30,8 @@ h1{
 }
 .labelInfo{
     text-align: center;
-    background-color: lightgrey;
-    color:blue;
+    background-color: white;
+    color:white;
     margin: 2px;
     padding: 2px;
     border-radius: 4px;

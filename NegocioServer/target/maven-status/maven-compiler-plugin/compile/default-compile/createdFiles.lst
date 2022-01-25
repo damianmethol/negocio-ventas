@@ -1,5 +1,6 @@
 ar\com\eduit\curso\java\web\services\rest\RestConfig.class
 ar\com\eduit\curso\java\web\services\rest\FacturaService.class
+ar\com\eduit\curso\java\web\enums\Tipo.class
 ar\com\eduit\curso\java\web\repositories\interfaces\I_FacturaRepository.class
 ar\com\eduit\curso\java\web\repositories\list\FacturaRepositoryFactory.class
 ar\com\eduit\curso\java\web\services\rest\TestRest.class

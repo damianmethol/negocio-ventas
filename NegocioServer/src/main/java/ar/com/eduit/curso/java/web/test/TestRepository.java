@@ -4,6 +4,7 @@ import ar.com.eduit.curso.java.web.connectors.Connector;
 import ar.com.eduit.curso.java.web.entities.Articulo;
 import ar.com.eduit.curso.java.web.entities.Cliente;
 import ar.com.eduit.curso.java.web.entities.Factura;
+import ar.com.eduit.curso.java.web.enums.Tipo;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_ArticuloRepository;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_ClienteRepository;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_FacturaRepository;
@@ -33,7 +34,7 @@ public class TestRepository {
 //        cr.getAll().forEach(System.out::println);
 
         I_FacturaRepository fr=new FacturaRepository(new Connector().getConnection());
-        fr.save(new Factura("Damian", "Methol", "A", 3500, 2));
+        fr.save(new Factura("Damian", "Methol", Tipo.B, 3500, 2));
         fr.getAll().forEach(System.out::println);
         
     }

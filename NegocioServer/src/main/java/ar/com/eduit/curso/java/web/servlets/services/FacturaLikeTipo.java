@@ -1,6 +1,7 @@
 package ar.com.eduit.curso.java.web.servlets.services;
 
 import ar.com.eduit.curso.java.web.connectors.Connector;
+import ar.com.eduit.curso.java.web.enums.Tipo;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_FacturaRepository;
 import ar.com.eduit.curso.java.web.repositories.jdbc.FacturaRepository;
 import com.google.gson.Gson;
@@ -18,7 +19,7 @@ public class FacturaLikeTipo extends HttpServlet {
         response.setContentType("application/json;charset=UTF-8");
         I_FacturaRepository fr=new FacturaRepository(new Connector().getConnection());
         try (PrintWriter out = response.getWriter()) {
-            out.println(new Gson().toJson(fr.getLikeTipo(request.getParameter("tipo"))));
+            out.println(new Gson().toJson(fr.getLikeTipo(Tipo.valueOf(request.getParameter("tipo")))));
         }
     }
 

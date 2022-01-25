@@ -1,9 +1,9 @@
 body{
-    background-color: gray;
+    background-color: rgb(99, 99, 99);
 }
 h1{
     text-align: center;
-    color: lightyellow;
+    color: white;
     background-color: black;
     padding: 10px;
     border-radius: 15px;
@@ -13,4 +13,8 @@ h1{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.text {
+    color: white;
 }
