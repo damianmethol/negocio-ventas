@@ -25,7 +25,18 @@ alter table clientes
     foreign key(idArticulo)
     references articulos(id);
 
+create table facturas(
+    id int auto_increment primary key,
+    nombre varchar(25) not null,
+    apellido varchar(25) not null,
+    tipo varchar(3) not null,
+    monto double not null,
+    idArticulo int not null
+);
 
-
+alter table facturas
+    add constraint FK_facturas_idArticulos
+    foreign key(idArticulo)
+    references articulos(id);
 
 

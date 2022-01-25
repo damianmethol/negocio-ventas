@@ -3,7 +3,6 @@ package ar.com.eduit.curso.java.web.servlets.services;
 import ar.com.eduit.curso.java.web.connectors.Connector;
 import ar.com.eduit.curso.java.web.repositories.interfaces.I_ArticuloRepository;
 import ar.com.eduit.curso.java.web.repositories.jdbc.ArticuloRepository;
-import ar.com.eduit.curso.java.web.repositories.list.ArticuloRepositoryFactory;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;

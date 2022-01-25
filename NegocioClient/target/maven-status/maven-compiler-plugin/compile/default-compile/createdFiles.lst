@@ -2,7 +2,10 @@ ar\com\eduit\curso\java\web\managed\bean\ArticuloMB.class
 ar\com\eduit\curso\java\web\repositories\interfaces\I_ClienteRepository.class
 ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository$2.class
 ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository$3.class
+ar\com\eduit\curso\java\web\repositories\interfaces\I_FacturaRepository.class
 ar\com\eduit\curso\java\web\managed\bean\ClienteMB.class
+ar\com\eduit\curso\java\web\managed\bean\FacturaMB.class
+ar\com\eduit\curso\java\web\repositories\rest\FacturaRepository$1.class
 ar\com\eduit\curso\java\web\test\TestRepository.class
 ar\com\eduit\curso\java\web\managed\bean\LinksMB.class
 ar\com\eduit\curso\java\web\repositories\rest\ArticuloRepository$1.class
@@ -11,7 +14,11 @@ ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository.class
 ar\com\eduit\curso\java\web\repositories\interfaces\I_ArticuloRepository.class
 ar\com\eduit\curso\java\web\repositories\rest\ArticuloRepository$2.class
 ar\com\eduit\curso\java\web\repositories\rest\ArticuloRepository.class
+ar\com\eduit\curso\java\web\repositories\rest\FacturaRepository.class
+ar\com\eduit\curso\java\web\repositories\rest\FacturaRepository$2.class
 ar\com\eduit\curso\java\web\repositories\rest\ClienteRepository$1.class
 ar\com\eduit\curso\java\web\entities\Articulo.class
 ar\com\eduit\curso\java\web\repositories\rest\ArticuloRepository$3.class
 ar\com\eduit\curso\java\web\http\ClienteHttp.class
+ar\com\eduit\curso\java\web\entities\Factura.class
+ar\com\eduit\curso\java\web\repositories\rest\FacturaRepository$3.class

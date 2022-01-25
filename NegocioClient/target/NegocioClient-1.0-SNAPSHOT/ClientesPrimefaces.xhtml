@@ -14,6 +14,7 @@
                 <p:menuitem value="Inicio"      url="#{linksMB.index}"/>
                 <p:menuitem value="Articulos"   url="#{linksMB.articulos}"/>
                 <p:menuitem value="Clientes"    url="#{linksMB.clientes}"/>
+                <p:menuitem value="Facturas"    url="#{linksMB.facturas}"/>
                 <p:divider layout="vertical"/>
                 <f:facet name="options">
                     <p:clock pattern="dd/MM/yyyy HH:mm"/>
@@ -52,8 +53,8 @@
         <hr></hr>
         <br></br>
         <h:form>
-            <p:outputLabel value="Buscar Apellido:"/>
-            <p:inputText value="#{clienteMB.buscarApellido}"/>
+            <p:outputLabel value="Buscar Apellido: "/>
+            <p:inputText value="#{clienteMB.buscarApellido}" style="margin-bottom: 25px"/>
             
             <p:carousel value="#{clienteMB.likeApellido}" headerText="Clientes" var="c" itemStyle="text-align:center" responsive="true">
                 <p:panelGrid columns="2" style="width:100%;margin:10px 0px" columnClasses="label,value" layout="grid" styleClass="ui-panelgrid-blank">
