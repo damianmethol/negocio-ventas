@@ -1,5 +1,6 @@
 # negocio-ventas
 Proyecto Java sobre un sistema de negocio (clientes, artículos, facturas, etc.).
+
 Java Project about a business system application (clients, items, receipts, etc).
 
 ESPAÑOL
