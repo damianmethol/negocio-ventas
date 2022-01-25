@@ -1,6 +1,6 @@
-drop database if exists javaWebNoviembre;
-create database javaWebNoviembre;
-use javaWebNoviembre;
+drop database if exists negocioBase;
+create database negocioBase;
+use negocioBase;
 
 drop table if exists clientes;
 drop table if exists articulos;

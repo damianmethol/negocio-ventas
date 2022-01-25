@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class Connector {
 
     private String driver = "org.mariadb.jdbc.Driver";
-    private String url = "jdbc:mariadb://localhost:3306/javaWebNoviembre";
+    private String url = "jdbc:mariadb://localhost:3306/negocioBase";
     private String user = "root";
     private String pass = "";
     
