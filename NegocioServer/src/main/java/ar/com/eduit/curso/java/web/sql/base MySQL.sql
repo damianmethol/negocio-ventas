@@ -4,6 +4,7 @@ use negocioBase;
 
 drop table if exists clientes;
 drop table if exists articulos;
+drop table if exists facturas;
 
 create table articulos(
     id int auto_increment primary key,
