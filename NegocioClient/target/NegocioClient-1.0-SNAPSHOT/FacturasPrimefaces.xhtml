@@ -43,7 +43,7 @@
                 <p:outputLabel for="articulo" value="Artículo: "/>
                 <p:selectOneMenu id="articulo" value="#{facturaMB.factura.idArticulo}" style="width: 360px;" >
                     <f:selectItems value="#{articuloMB.all}" var="a" itemValue="#{a.id}"
-                                   itemLabel="#{a.id}, #{a.descripcion}, #{a.precio}, #{a.stock}"/>
+                                   itemLabel="#{a.id}, #{a.descripcion}"/>
                 </p:selectOneMenu>
                 <p:commandButton value="Guardar" action="#{facturaMB.save()}" ajax="false"/>
                 <p:outputLabel value="#{facturaMB.mensaje}"/>

@@ -3,7 +3,7 @@ body{
 
 }
 h1{
-    background-color: red;
+    background-color: black;
     color: brown;
     text-align: center;
     margin: 5px;
@@ -44,4 +44,11 @@ h1{
 .celda{
     color:blueviolet;
     padding: 3px;
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }

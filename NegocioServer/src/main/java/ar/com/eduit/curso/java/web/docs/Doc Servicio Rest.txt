@@ -1,5 +1,5 @@
 Documento De Servicio REST
-Path Servicio: http://localhost:8082/NegocioServer/webresources
+Path Servicio: http://localhost:8084/NegocioServer/webresources
 
 
 ========================================================================

@@ -16,7 +16,7 @@ public class FacturaMB implements Serializable {
     private Factura factura=new Factura();
     private String mensaje="";
     private String buscarApellido="";
-    private I_FacturaRepository fr=new FacturaRepository("http://localhost:8082/NegocioServer/webresources");
+    private I_FacturaRepository fr=new FacturaRepository("http://localhost:8084/NegocioServer/webresources");
     
     public void save(){
         fr.save(factura);

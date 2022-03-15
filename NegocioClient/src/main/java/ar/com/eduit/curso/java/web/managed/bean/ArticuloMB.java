@@ -16,7 +16,7 @@ public class ArticuloMB implements Serializable {
     private Articulo articulo=new Articulo();
     private String mensaje="";
     private String buscarDescripcion="";
-    private I_ArticuloRepository ar=new ArticuloRepository("http://localhost:8082/NegocioServer/webresources");
+    private I_ArticuloRepository ar=new ArticuloRepository("http://localhost:8084/NegocioServer/webresources");
 
     public void save(){
         ar.save(articulo);

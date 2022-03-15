@@ -12,7 +12,7 @@ public class TestRepository {
     public static void main(String[] args) {
         //I_ArticuloRepository ar=ArticuloRepositoryFactory.getArticuloRepository();
         //I_ArticuloRepository ar=new ArticuloRepository(new Connector().getConnection());
-        I_ArticuloRepository ar=new ArticuloRepository("http://localhost:8082/NegocioServer/webresources");
+        I_ArticuloRepository ar=new ArticuloRepository("http://localhost:8084/NegocioServer/webresources");
         ar.save(new Articulo("Carpa",35000,10));
         ar.save(new Articulo("Termo",2300,20));
         ar.save(new Articulo("Silla",5000,10));
@@ -28,7 +28,7 @@ public class TestRepository {
         ar.getLikeDescripcion("me").forEach(System.out::println);
         System.out.println("****************************************************");
         
-        I_ClienteRepository cr=new ClienteRepository("http://localhost:8082/NegocioServer/webresources");
+        I_ClienteRepository cr=new ClienteRepository("http://localhost:8084/NegocioServer/webresources");
         
         cr.save(new Cliente("Juan", "Perez", 50, 1));
         cr.save(new Cliente("Diego", "Gomez", 45, 2));

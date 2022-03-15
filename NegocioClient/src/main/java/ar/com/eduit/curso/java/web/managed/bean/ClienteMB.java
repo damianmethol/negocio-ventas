@@ -18,7 +18,7 @@ public class ClienteMB implements Serializable{
     private Cliente cliente=new Cliente();
     private String mensaje="";
     private String buscarApellido="";
-    private I_ClienteRepository cr=new ClienteRepository("http://localhost:8082/NegocioServer/webresources");
+    private I_ClienteRepository cr=new ClienteRepository("http://localhost:8084/NegocioServer/webresources");
 
     public Cliente getCliente() {
         return cliente;

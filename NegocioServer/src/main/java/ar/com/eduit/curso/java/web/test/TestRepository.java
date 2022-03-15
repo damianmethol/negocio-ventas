@@ -17,10 +17,10 @@ public class TestRepository {
     public static void main(String[] args) {
         //I_ArticuloRepository ar=ArticuloRepositoryFactory.getArticuloRepository();
         I_ArticuloRepository ar=new ArticuloRepository(new Connector().getConnection());
-//        ar.save(new Articulo("Carpa",35000,10));
-//        ar.save(new Articulo("Termo",2300,20));
-//        ar.save(new Articulo("Silla",5000,10));
-//        ar.save(new Articulo("Cocina",5000,30));
+        ar.save(new Articulo("Carpa",35000,10));
+        ar.save(new Articulo("Termo",2300,20));
+        ar.save(new Articulo("Silla",5000,10));
+        ar.save(new Articulo("Cocina",5000,30));
         
 //        ar.getAll().forEach(System.out::println);
         System.out.println(ar.getById(3));
